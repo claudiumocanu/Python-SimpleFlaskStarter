@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>Dashboard... :)</h1>
+
+    <ul>
+        <li># Simple get mapping
+            @app.route('/hello')</li>
+        <li># Simple get mapping with one string argument passed
+            @app.route('/profile/<username>')</li>
+        <li># Simple get mapping wiht integer argument passed
+            @app.route('/post/<int:post_id>')</li>
+        <li># Single url handling both GET and POST requests
+            @app.route('/api/req', methods=['GET', 'POST'])</li>
+        <li># Simple template rendering
+            @app.route('/dashboard', methods=['GET'])</li>
+    </ul>
+
+</body>
+</html>
